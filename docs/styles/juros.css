@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+}
+
+h2 {
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+.resultados {
+    display: none;
+}

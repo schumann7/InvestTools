@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/juros.css">
+    <title>Calculadora de Juros Compostos</title>
+</head>
+
+<body>
+    <section>
+        <a href="../index.html">
+            <h2>Calculadora de Juros Compostos</h2>
+        </a>
+        <div>
+            <div>
+                <p>Aporte inicial</p>
+                <div>
+                    <input type="text" id="aporteInicial" placeholder="R$ 0,00">
+                </div>
+            </div>
+            <div>
+                <p>Aporte mensal</p>
+                <div>
+                    <input type="text" id="aporteMensal" placeholder="R$ 0,00">
+                </div>
+            </div>
+            <div>
+                <p>Taxa de Juros</p>
+                <div>
+                    <input type="text" placeholder="0,00%" id="taxa">
+                </div>
+                <div>
+                    <p>Período</p>
+                    <div>
+                        <input type="text" id="periodo">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <button onclick="calcular()">Calcular</button>
+                        <button onclick="limpar()">Limpar</button>
+                    </div>
+                </div>
+                <div class="resultados" id="resultados">
+                    <div>
+                        <p>Montante</p>
+                        <p id="montante">R$0,00</p>
+                    </div>
+                    <div>
+                        <p>Valor investido</p>
+                        <p id="investido">R$0,00</p>
+                    </div>
+                    <div>
+                        <p>Total em juros</p>
+                        <p id="valorJuros">R$0,00</p>
+                    </div>
+                </div>
+    </section>
+</body>
+<script src="../scripts/juros.js"></script>
+
+</html>

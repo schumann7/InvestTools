@@ -38,9 +38,15 @@ function jurosCompostos(vInicial, vMensal, cTaxa, cPeriodo) {
 
 function printJuros(juros, total) {
     let tJuros = juros - total;
-    let resultado = `R$ ${juros.toFixed(2).replace('.', ',')}`;
-    let rInvestido = `R$ ${total.toFixed(2).replace('.', ',')}`;
-    let rJuros = `R$ ${tJuros.toFixed(2).replace('.', ',')}`;
+    let resultado = juros.toFixed(2).replace('.', ',');
+    resultado = resultado.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    resultado = `R$ ${resultado}`;
+    let rInvestido = total.toFixed(2).replace('.', ',');
+    rInvestido = rInvestido.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    rInvestido = `R$ ${rInvestido}`;
+    let rJuros = tJuros.toFixed(2).replace('.', ',');
+    rJuros = rJuros.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    rJuros = `R$ ${rJuros}`;
     document.getElementById("montante").textContent = resultado;
     document.getElementById("investido").textContent = rInvestido;
     document.getElementById("valorJuros").textContent = rJuros;
@@ -51,12 +57,15 @@ function calcular() {
     if (aporteInicial.value == '' || aporteMensal.value == '' || taxa.value == '' || periodo.value == '') {
         alert('Preencha todos os campos!')
     }
+    else if (taxa.value == '0,00%') {
+        alert('A taxa de juros não pode ser 0%')
+    }
     else {
-        let pAporteInicial = parseFloat(aporteInicial.value.replace(/R\$\s?/g, '').replace('.', '').replace(',', '.'));
-        let pAporteMensal = parseFloat(aporteMensal.value.replace(/R\$\s?/g, '').replace('.', '').replace(',', '.'));
+        let pAporteInicial = parseFloat(aporteInicial.value.replace(/R\$\s?/g, '').replace(/\./g, '').replace(',', '.'));
+        let pAporteMensal = parseFloat(aporteMensal.value.replace(/R\$\s?/g, '').replace(/\./g, '').replace(',', '.'));
         let pTaxa = parseFloat(taxa.value.replace('%', '').replace(',', '.'));
         let pPeriodo = parseFloat(periodo.value);
-        let total = pAporteInicial + (pAporteMensal * pPeriodo)
+        let total = pAporteInicial + (pAporteMensal * pPeriodo);
         let juros = jurosCompostos(pAporteInicial, pAporteMensal, pTaxa, pPeriodo);
         printJuros(juros, total);
     }

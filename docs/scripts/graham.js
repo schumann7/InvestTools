@@ -14,7 +14,7 @@ function mask(input) {
         value = value.replace(/\D/g, '');
         value = (value / 100).toFixed(2).replace('.', ',');
         value = value.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-        e.target.value = value;
+        e.target.value = value ? `R$ ${value}` : '';
     });
 };
 
@@ -26,7 +26,7 @@ function graham(lpa, vpa) {
 };
 
 function printJusto(justo) {
-    let precoJusto = `R$ ${justo.toFixed(2).replace('.', ',')}`;
+    let precoJusto = `R$ ${justo.toFixed(2).replace('.', ',').replace(/\B(?=(\d{3})+(?!\d))/g, '.')}`;
     document.getElementById('precoJusto').textContent = precoJusto;
     resultado.style.display = 'block';
 }
@@ -36,8 +36,8 @@ function calcular() {
         alert('Preencha todos os campos!')
     }
     else {
-        let lpa = parseFloat(lpaInput.value.replace('.', '').replace(',', '.'));
-        let vpa = parseFloat(vpaInput.value.replace('.', '').replace(',', '.'));
+        let lpa = parseFloat(lpaInput.value.replace(/R\$\s?/g, '').replace(/\./g, '').replace(',', '.'));
+        let vpa = parseFloat(vpaInput.value.replace(/R\$\s?/g, '').replace(/\./g, '').replace(',', '.'));
         let justo = graham(lpa, vpa);
         printJusto(justo);
     };

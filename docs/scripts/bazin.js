@@ -28,7 +28,9 @@ function bazin(media, retorno) {
 };
 
 function printPreco(teto) {
-    let precoTeto = `R$ ${teto.toFixed(2).replace('.', ',')}`;
+    let precoStr = teto.toFixed(2).replace('.', ',');
+    precoStr = precoStr.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    let precoTeto = `R$ ${precoStr}`;
     document.getElementById('precoTeto').textContent = precoTeto;
     resultado.style.display = 'block';
 }
@@ -37,8 +39,11 @@ function calcular() {
     if (mediaDividendos.value == '' || retornoEsperado.value == '') {
         alert('Preencha todos os campos!')
     }
+    else if (retornoEsperado.value == '0,00%') {
+        alert('O retorno esperado não pode ser 0%')
+    }
     else {
-        let media = parseFloat(mediaDividendos.value.replace(/R\$\s?/g, '').replace('.', '').replace(',', '.'));
+        let media = parseFloat(mediaDividendos.value.replace(/R\$\s?/g, '').replace(/\./g, '').replace(',', '.'));
         let retorno = parseFloat(retornoEsperado.value.replace('%', '').replace(',', '.'));
         let teto = bazin(media, retorno);
         printPreco(teto);

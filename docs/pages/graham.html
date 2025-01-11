@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/graham.css">
+    <title>Calculadora de Preço Justo Graham</title>
+</head>
+
+<body>
+    <section>
+        <a href="../index.html">
+            <h2>Calculadora de Preço Justo Graham</h2>
+        </a>
+        <div>
+            <div>
+                <p>LPA (Lucro por ação)</p>
+                <input type="tel" id="lpaInput" placeholder="0,00">
+            </div>
+            <div>
+                <p>VPA (Valor patrimonial por ação)</p>
+                <input type="tel" id="vpaInput" placeholder="0,00">
+            </div>
+            <div>
+                <button onclick="calcular()">Calcular</button>
+                <button onclick="limpar()">Limpar</button>
+            </div>
+        </div>
+        <div class="resultado" id="resultado">
+            <p>Preço justo</p>
+            <p id="precoJusto">R$ 0,00</p>
+        </div>
+    </section>
+</body>
+<script src="../scripts/graham.js"></script>
+
+</html>

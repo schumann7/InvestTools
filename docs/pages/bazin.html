@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/bazin.css">
+    <title>Calculadora de Preço Teto Bazin</title>
+</head>
+
+<body>
+    <section>
+        <a href="../index.html">
+            <h2>Calculadora de Preço Teto Bazin</h2>
+        </a>
+        <div>
+            <div>
+                <p>Valor médio dos dividendos</p>
+                <input type="tel" id="mediaDividendos" placeholder="R$ 0,00">
+            </div>
+            <div>
+                <p>Retorno esperado</p>
+                <input type="tel" id="retornoEsperado" placeholder="0,00%">
+            </div>
+            <div>
+                <button onclick="calcular()">Calcular</button>
+                <button onclick="limpar()">Limpar</button>
+            </div>
+        </div>
+        <div class="resultado" id="resultado">
+            <p>Valor máximo justo</p>
+            <p id="precoTeto">R$ 0,00</p>
+        </div>
+    </section>
+</body>
+<script src="../scripts/bazin.js"></script>
+
+</html>

@@ -45,7 +45,6 @@ function printJuros(juros, total) {
     document.getElementById("investido").textContent = rInvestido;
     document.getElementById("valorJuros").textContent = rJuros;
     resultados.style.display = 'block';
-
 }
 
 function calcular() {
@@ -60,6 +59,5 @@ function calcular() {
         let total = pAporteInicial + (pAporteMensal * pPeriodo)
         let juros = jurosCompostos(pAporteInicial, pAporteMensal, pTaxa, pPeriodo);
         printJuros(juros, total);
-
     }
 }

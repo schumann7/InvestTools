@@ -8,16 +8,18 @@ function calcular1() {
     let valor = document.getElementById('valor');
     if (percentual.value == '' || valor.value == '') {
         alert("Preencha todos os campos!")
+        return;
     }
     else if (valor.value == 0) {
         alert("O valor não pode ser igual a 0");
+        return;
     }
-    else if (valor.value < 0 || percentual.value < 0) {
+    percentual = Number(percentual.value);
+    valor = Number(valor.value);
+    if (valor < 0 || percentual < 0) {
         alert('Insira um valor maior que 0');
     }
     else {
-        percentual = Number(percentual.value);
-        valor = Number(valor.value);
         let resultado = (percentual / 100) * valor;
         resultado1.textContent = resultado;
     }
@@ -28,16 +30,18 @@ function calcular2() {
     let percentual1 = document.getElementById('percentual1');
     if (percentual1.value == '' || valor1.value == '') {
         alert("Preencha todos os campos!")
+        return;
     }
     else if (percentual1.value == 0) {
         alert("O valor não pode ser igual a 0")
+        return;
     }
-    else if (valor1.value < 0 || percentual1.value < 0) {
+    percentual1 = Number(percentual1.value);
+    valor1 = Number(valor1.value);
+    if (valor1 < 0 || percentual1 < 0) {
         alert('Insira um valor maior que 0');
     }
     else {
-        percentual1 = Number(percentual1.value);
-        valor1 = Number(valor1.value);
         let resultado = (valor1 / percentual1) * 100;
         resultado2.textContent = `${resultado}%`;
     }
@@ -48,19 +52,21 @@ function calcular3() {
     let valorFinal = document.getElementById('valorFinal');
     if (valorInicial.value == '' || valorFinal.value == '') {
         alert('Preencha todos os campos!');
+        return;
     }
     else if (valorInicial.value == 0 || valorFinal.value == 0) {
         alert('O valor não pode ser igual a 0');
+        return;
     }
-    else if (valorInicial.value < 0 || valorFinal.value < 0) {
+    valorInicial = Number(valorInicial.value);
+    valorFinal = Number(valorFinal.value);
+    if (valorInicial < 0 || valorFinal < 0) {
         alert('Insira um valor maior que 0');
     }
-    else if (valorInicial.value > valorFinal.value) {
+    else if (valorInicial > valorFinal) {
         alert('O valor inicial não pode ser maior que o valor final');
     }
     else {
-        valorInicial = Number(valorInicial.value);
-        valorFinal = Number(valorFinal.value);
         let resultado = ((valorFinal - valorInicial) / valorInicial) * 100;
         resultado3.textContent = `${resultado}%`;
     }
@@ -71,19 +77,20 @@ function calcular4() {
     let valorFinal1 = document.getElementById('valorFinal1');
     if (valorInicial1.value == '' || valorFinal1.value == '') {
         alert('Preencha todos os campos!')
+        return;
     }
-    else if (valorInicial1.value <= 0) {
+    valorInicial1 = Number(valorInicial1.value);
+    valorFinal1 = Number(valorFinal1.value);
+    if (valorInicial1 <= 0) {
         alert('O valor não pode ser igual ou menor que 0')
     }
-    else if (valorFinal1.value < 0) {
+    else if (valorFinal1 < 0) {
         alert('Insira um valor maior ou igual a 0');
     }
-    else if (valorFinal1.value > valorInicial1.value) {
+    else if (valorFinal1 > valorInicial1) {
         alert('O valor final não pode ser maior que o valor inicial');
     }
     else {
-        valorInicial1 = Number(valorInicial1.value);
-        valorFinal1 = Number(valorFinal1.value);
         let resultado = ((valorInicial1 - valorFinal1) / valorInicial1) * 100;
         resultado4.textContent = `${resultado}%`;
     }

@@ -80,6 +80,12 @@ button:hover {
     .investtools {
         font-size: 36pt;
         margin-bottom: 5%;
+        transition: none;
+    }
+
+    .investtools:hover {
+        transition: none;
+        font-size: 36pt;
     }
 
     button {
@@ -89,11 +95,22 @@ button:hover {
         font-size: 14pt;
     }
 
+    button:hover {
+        font-size: 14pt;
+        transition: none;
+        padding: 4% 2% 4% 2%;
+    }
+
     .buttons{
         margin-bottom: 3%;
     }
 
     span{
         font-size: 18pt;
+        transition: none;
     }
-}
+
+    span:hover{
+        font-size: 18pt;
+        transition: none;
+    }}

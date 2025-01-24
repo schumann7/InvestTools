@@ -98,9 +98,24 @@ button:hover {
         margin-top: 6vw;
         width: 36vw;
         height: 6vh;
+        transition: none;
+    }
+    
+    button:hover {
+        transition: none;
     }
 
     #limpar{
         margin-left: 8vw;
     }
+    
+    h2 {
+        transition: none;
+    }
+    
+    h2:hover {
+        transition: none;
+        font-size: 25pt;
+    }
+    
 }

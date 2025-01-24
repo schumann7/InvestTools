@@ -99,6 +99,11 @@ button:hover {
         margin-top: 6vw;
         width: 36vw;
         height: 6vh;
+        transition: none;
+    }
+
+    button:hover {
+        transition: none;
     }
 
     #limpar{
@@ -107,5 +112,14 @@ button:hover {
 
     .resultado{
         margin-top: 1vw;
+    }
+
+    h2{
+        transition: none;
+    }
+
+    h2:hover {
+        transition: none;
+        font-size: 25pt;
     }
 }

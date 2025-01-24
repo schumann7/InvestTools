@@ -1,15 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300..700&display=swap');
+
 body {
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #111821;
+    color: #dbdcde;
+}
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    max-height: 200vh;
 }
 
 h2 {
-    color: black;
+    color: #dbdcde;
+    margin: 0;
+    font-weight: 700;
+    font-size: 24pt;
+    margin-bottom: 4%;
+    text-align: center;
+    transition: ease-in 0.5s;
+}
+
+h2:hover {
+    font-size: 28pt;
+    transition: ease-in 0.5s;
 }
 
 a {
     text-decoration: none;
 }
 
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p{
+    text-align: center;
+    margin: 0;
+    font-size: 19pt;
+    font-weight: 600;
+    margin-top: 2%;
+}
+
+input{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    border-radius: 10px;
+    border: solid 1px #dbdcde;
+    padding: 1%;
+    text-align: center;
+    width: 30vw;
+    font-size: 18pt;
+    margin-top: 2%;
+    background-color: #dbdcde;
+    color: #111821;
+}
+
+button{
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    color: #dbdcde;
+    border-color: #dbdcde;
+    background-color: #111821;
+    border-radius: 12px;
+    font-size: 18pt;
+    font-weight: 500;
+    transition: ease-in 0.5s;
+    padding: 2%;
+}
+
+button:hover {
+    font-size: 19pt;
+    transition: ease-in 0.5s;
+    padding: 2.5%;
+    background-color: #272e38;
+}
+
+.buttons{
+    margin-top: 5%;
+}
+
+.rightBtn{
+    margin-left: 3%;
+}
+
 .resultados {
     display: none;
+    margin-bottom: 5%;
+}
+
+@media (max-width: 440px) {
+    button {
+        text-align: center;
+        font-size: 14pt;
+        padding: 4%;
+    }
+
+    .rightBtn{
+        margin-left: 5%;
+    }
+
+    input{
+        padding: 2%;
+        width: 60vw;
+        font-size: 14pt;
+    }
+    
+    p{
+        font-size: 15pt;
+        margin-top: 5%;   
+    }
+
+    .buttons{
+        margin-top: 8%;
+    }
 }

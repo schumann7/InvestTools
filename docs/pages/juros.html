@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon-light.ico" type="image/x-icon" media="(prefers-color-scheme: light)">
+    <link rel="shortcut icon" href="../assets/favicon-dark.ico" type="image/x-icon" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" href="../styles/juros.css">
     <title>Calculadora de Juros Compostos</title>
 </head>
@@ -16,31 +18,31 @@
         <div>
             <div>
                 <p>Aporte inicial</p>
-                <div>
+                <div class="center">
                     <input type="tel" id="aporteInicial" placeholder="R$ 0,00">
                 </div>
             </div>
             <div>
                 <p>Aporte mensal</p>
-                <div>
+                <div class="center">
                     <input type="tel" id="aporteMensal" placeholder="R$ 0,00">
                 </div>
             </div>
             <div>
                 <p>Taxa de Juros</p>
-                <div>
+                <div class="center">
                     <input type="tel" placeholder="0,00%" id="taxa">
                 </div>
                 <div>
                     <p>Período</p>
-                    <div>
+                    <div class="center">
                         <input type="tel" id="periodo">
                     </div>
                 </div>
                 <div>
-                    <div>
+                    <div class="buttons">
                         <button onclick="calcular()">Calcular</button>
-                        <button onclick="limpar()">Limpar</button>
+                        <button class="rightBtn" onclick="limpar()">Limpar</button>
                     </div>
                 </div>
                 <div class="resultados" id="resultados">

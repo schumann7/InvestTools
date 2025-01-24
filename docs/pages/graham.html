@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon-light.ico" type="image/x-icon"
+        media="(prefers-color-scheme: light)">
+    <link rel="shortcut icon" href="../assets/favicon-dark.ico" type="image/x-icon"
+        media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" href="../styles/graham.css">
     <title>Calculadora de Preço Justo Graham</title>
 </head>
@@ -14,22 +18,24 @@
             <h2>Calculadora de Preço Justo Graham</h2>
         </a>
         <div>
-            <div>
-                <p>LPA (Lucro por ação)</p>
-                <input type="tel" id="lpaInput" placeholder="0,00">
+            <div class="center">
+                <div>
+                    <p>LPA (Lucro por ação)</p>
+                    <input type="tel" id="lpaInput" placeholder="0,00">
+                </div>
+                <div>
+                    <p>VPA (Valor patrimonial por ação)</p>
+                    <input type="tel" id="vpaInput" placeholder="0,00">
+                </div>
+                <div>
+                    <button onclick="calcular()">Calcular</button>
+                    <button id="limpar" onclick="limpar()">Limpar</button>
+                </div>
             </div>
-            <div>
-                <p>VPA (Valor patrimonial por ação)</p>
-                <input type="tel" id="vpaInput" placeholder="0,00">
+            <div class="resultado" id="resultado">
+                <p>Preço justo</p>
+                <p id="precoJusto">R$ 0,00</p>
             </div>
-            <div>
-                <button onclick="calcular()">Calcular</button>
-                <button onclick="limpar()">Limpar</button>
-            </div>
-        </div>
-        <div class="resultado" id="resultado">
-            <p>Preço justo</p>
-            <p id="precoJusto">R$ 0,00</p>
         </div>
     </section>
 </body>

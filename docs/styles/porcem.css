@@ -39,7 +39,7 @@ a {
 h2 {
     color: #dbdcde;
     font-weight: 700;
-    font-size: 24pt;
+    font-size: 28pt;
     margin: 0% 0% 12% 0%;
     transition: ease-in 0.5s;
     text-align: center;
@@ -47,7 +47,7 @@ h2 {
 
 h2:hover {
     transition: ease-in 0.5s;
-    font-size: 26pt;
+    font-size: 30pt;
 }
 
 .input-group {
@@ -154,7 +154,6 @@ p {
     }
 
     h2 {
-        font-size: 16pt;
         margin: 5% 0 10%;
         text-align: center;
         transition: none;

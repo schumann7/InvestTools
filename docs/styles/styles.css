@@ -76,7 +76,7 @@ button:hover {
     transition: ease-in 0.5s;
 }
 
-@media (max-width: 440px) {
+@media screen and (max-width: 555px) {
     .investtools {
         font-size: 36pt;
         margin-bottom: 5%;

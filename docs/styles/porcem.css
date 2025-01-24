@@ -106,9 +106,10 @@ p {
     border-radius: 10px;
 }
 
-@media (max-width: 440px) {
+@media screen and (max-width: 555px) {
     input {
         width: 10vw;
+        margin: 0% 1%;
     }
 
     button {

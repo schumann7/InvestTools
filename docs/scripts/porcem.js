@@ -21,6 +21,8 @@ function calcular1() {
     }
     else {
         let resultado = (percentual / 100) * valor;
+        resultado = resultado.toFixed(2).replace('.', ',');
+        resultado = resultado.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
         resultado1.textContent = resultado;
     }
 }
@@ -43,6 +45,8 @@ function calcular2() {
     }
     else {
         let resultado = (valor1 / percentual1) * 100;
+        resultado = resultado.toFixed(2).replace('.', ',');
+        resultado = resultado.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
         resultado2.textContent = `${resultado}%`;
     }
 }
@@ -68,6 +72,8 @@ function calcular3() {
     }
     else {
         let resultado = ((valorFinal - valorInicial) / valorInicial) * 100;
+        resultado = resultado.toFixed(2).replace('.', ',');
+        resultado = resultado.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
         resultado3.textContent = `${resultado}%`;
     }
 }
@@ -92,6 +98,8 @@ function calcular4() {
     }
     else {
         let resultado = ((valorInicial1 - valorFinal1) / valorInicial1) * 100;
+        resultado = resultado.toFixed(2).replace('.', ',');
+        resultado = resultado.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
         resultado4.textContent = `${resultado}%`;
     }
 }
